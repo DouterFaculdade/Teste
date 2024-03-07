@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter String</title>
+</head>
+<body>
+    <h1>Inverter String</h1>
+    <label for="inputString">Digite uma string:</label>
+    <input type="text" id="inputString">
+    <button onclick="inverterString()">Inverter</button>
+    <p id="resultado"></p>
+
+    <script>
+        function inverterString() {
+            const inputElement = document.getElementById("inputString");
+            const stringOriginal = inputElement.value;
+            const stringInvertida = stringOriginal.split('').reverse().join('');
+            document.getElementById("resultado").innerText = `String invertida: ${stringInvertida}`;
+
+            if (stringInvertida.toLowerCase() === "ovo") {
+                alert("Acho que você encontrou um easter egg!");
+        }
+    }
+    </script>
+</body>
+</html>
